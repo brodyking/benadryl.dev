@@ -1,0 +1,49 @@
+@font-face {
+    font-family: FreePixel;
+    src: url('/fonts/FreePixel.ttf');
+}
+
+body {
+    font-family: FreePixel;
+    font-size: 15px;
+    background-image: url('/img/background.gif')!important;
+    background-size: repeat!important;
+    background-color: rgb(66, 66, 66);
+    background-blend-mode: darken;
+    border: 3px solid #fc8bf2; 
+    height: 100vh;
+    padding:0;
+    margin:0;
+}
+
+.content {
+    max-width: 500px;
+    margin: auto;
+}
+a,nav-link {
+    color:#fc8bf2!important;
+    text-decoration: none!important;
+}
+.nav-link {
+    padding-bottom: 3px!important;
+}
+a:hover {
+    color: #ac5da6!important;
+    text-decoration: underline;
+}
+.btn:hover {
+    color: #ac5da6;
+}
+.btn,.active {
+    background-color: #fc8bf2!important;
+    color: black!important;
+    border-color: black!important;
+}
+.btn:hover,.active:hover {
+    background-color: #ac5da6!important;
+    color: black!important;
+    border-color: black!important;
+}
+.card {
+    background-color: black;
+}
