@@ -11,4 +11,8 @@ function siteMotd() {
     global $data;
     return $data["siteMotd"];
 }
+function footerText() {
+    global $data;
+    return $data["footerText"];
+}
 ?>
