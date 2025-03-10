@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php include "data.php"; ?>
+<?php include "config.php"; ?>
 
 <head>
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
@@ -14,9 +14,9 @@
 
 <body data-bs-theme="dark" class="p-4">
     <div class="content">
-        <h2 style="color: #fc8bf2;font-family: Arial, Helvetica, sans-serif!important;" class="text-center">
+        <h2 style="color: #fc8bf2;font-family: Arial, Helvetica, sans-serif!important;" class="text-center site-head">
             <?php echo siteName(); ?></h2>
-        <p class="text-center"><?php echo siteMotd(); ?></p>
+        <p class="text-center site-motd"><?php echo siteMotd(); ?></p>
         <div class="card">
             <div class="card-header">
                 <ul class="nav nav-pills card-header-pills">
@@ -53,7 +53,7 @@
                     </svg></a>
             </div>
         </div>
-        <p class="text-center" style="margin-top: 20px;opacity: 75%;"><?php echo footerText(); ?></p>
+        <p class="text-center site-motd" style="margin-top: 20px;"><?php echo footerText(); ?></p>
     </div>
     <script src="/js/bootstrap/bootstrap.js"></script>
 
