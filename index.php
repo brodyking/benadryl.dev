@@ -4,7 +4,12 @@
 
 <head>
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <?php 
+    if (!isset($_GET['nocss']))
+    echo '<link href="css/style.css" rel="stylesheet">';
+    else
+    echo '<style>body { max-width: 500px; margin: auto; } .card { margin-bottom: 20px; } .btn {margin-right: 15px; }</style>';
+    ?>
     <title>home &middot; <?php echo siteName(); ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,11 +19,63 @@
 
 <body data-bs-theme="dark" class="p-4">
     <div class="content">
-        <h2 style="color: #fc8bf2;font-family: Arial, Helvetica, sans-serif!important;" class="text-center site-head">
+        <h2 style="color: #fc8bf2;" class="text-center site-head arial">
             <?php echo siteName(); ?></h2>
         <p class="text-center site-motd"><?php echo siteMotd(); ?></p>
+        <!-- Paperwork -->
+        <?php
+        
+        if (isset($_GET["paperwork"])) {
+            
+            $paperwork = paperwork();
+            
+            echo "<div class='card'>";
+            echo "<div class='card-header'>Paperwork</div>";
+            echo "<div class='card-body arial'>";
+
+            foreach ($paperwork as $current) {
+                echo "<h5 class='card-title'>".$current["name"]."</h5>";
+                echo "<p><code>".$current["content"]."<br></code><code class='secondary-b'>Last Updated: ".$current['lastupdated']."</code></p>";
+            }
+
+            echo "</div></div>";
+
+        }
+
+        ?>
+        <!-- Source -->
+        <?php
+        
+        if (isset($_GET["source"])) {
+            
+            
+            echo "</div><div class='card'>";
+            echo "<div class='card-header'>Source</div>";
+            echo "<div class='card-body'><pre>".source()."</pre></div></div><div class='content'>";
+
+
+
+        }
+
+        ?>
         <div class="card">
             <div class="card-header">
+               About 
+            </div>
+            <div class="card-body">
+                <p class="card-text">This site is used to host some of my personal projects. More to come!</p>
+                <p class="card-text">You can check out my newest creation, pouch-track below!</p>
+                <a href="https://pt.benadryl.dev" class="btn btn-primary">Pouchtrack <svg
+                        xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
+                        class="bi bi-box-arrow-up-right" viewBox="0 0 16 16" style="vertical-align: -10%;">
+                        <path fill-rule="evenodd"
+                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
+                        <path fill-rule="evenodd"
+                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
+                    </svg></a>
+            </div>
+
+            <div class="card-body border-top socials">
                 <ul class="nav nav-pills card-header-pills">
                     <li class="nav-item">
                         <a class="nav-link" href="https://github.com/brodyking/"><svg xmlns="http://www.w3.org/2000/svg"
@@ -40,19 +97,53 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Projects
+            </div>
             <div class="card-body">
-                <p class="card-text">This site is used to host some of my personal projects. More to come!</p>
-                <p class="card-text">You can check out my newest creation, pouch-track below!</p>
-                <a href="https://pt.benadryl.dev" class="btn btn-primary">Pouchtrack <svg
-                        xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor"
-                        class="bi bi-box-arrow-up-right" viewBox="0 0 16 16" style="vertical-align: -10%;">
-                        <path fill-rule="evenodd"
-                            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                        <path fill-rule="evenodd"
-                            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-                    </svg></a>
+                <?php 
+                
+                    $projects = projects();
+
+                    foreach ($projects as $current) {
+                        echo "<h5 class='card-title arial'><span class='opacity-50'>brodyking/</span>" . $current["name"] ."</h5>";
+                        echo "<p>".$current["about"]."</p>";
+                        if (isset($current["github"])) {
+                            /*
+                            svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"
+                                style="vertical-align: -15%;">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                            </svg>
+                            */
+                            echo '<a class="btn btn-primary" href="'.$current["github"].'">Github <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16" style="vertical-align: -10%;"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" /></svg></a>';
+                        }
+                        if (isset($current["demo"])) {
+                            echo '<a class="btn btn-primary" href="'.$current["demo"].'">Demo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-fill" viewBox="0 0 16 16" style="vertical-align: -10%;"><path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/></svg></a>';
+                        }
+                        echo "<br><br>";
+                    }
+
+                ?>
             </div>
         </div>
+        <p class="text-center" style="margin-top: 20px;">
+            <?php
+
+                    $flags = flags();
+                    echo "Flags: "; 
+                    if (!empty($_GET)) {
+                            echo "[<a href='/'>Reset Flags</a>] ";
+                    }
+                    foreach ($flags as $current) {
+                            echo "[<a href='?".$current["send"]."'>".$current["name"]."</a>] ";
+                    }
+
+            ?>
+        </p>
         <p class="text-center site-motd" style="margin-top: 20px;"><?php echo footerText(); ?></p>
     </div>
     <script src="/js/bootstrap/bootstrap.js"></script>
