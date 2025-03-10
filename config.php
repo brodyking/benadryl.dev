@@ -15,4 +15,19 @@ function footerText() {
     global $data;
     return $data["footerText"];
 }
+function projects() {
+    global $data;
+    return $data["projects"];
+}
+function flags() {
+    global $data;
+    return $data["flags"];
+}
+function paperwork() {
+    global $data;
+    return $data["paperwork"];
+}
+function source() {
+    return file_get_contents("config.json");
+}
 ?>
