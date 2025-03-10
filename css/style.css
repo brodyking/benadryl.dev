@@ -1,15 +1,15 @@
 @font-face {
-    font-family: FreePixel;
-    src: url('/fonts/FreePixel.ttf');
+    font-family: UbuntuMono;
+    src: url('/fonts/UbuntuMono-Regular.ttf');
 }
 
 body {
-    font-family: FreePixel;
+    font-family: UbuntuMono;
     font-size: 15px;
     background-image: url('/img/background.gif')!important;
     background-size: repeat!important;
-    background-color: rgb(66, 66, 66);
-    background-blend-mode: darken;
+    background-color: #00000055;
+    background-blend-mode:darken;
     border: 3px solid #fc8bf2; 
     height: 100vh;
     padding:0;
@@ -20,6 +20,7 @@ body {
     max-width: 500px;
     margin: auto;
 }
+
 a,nav-link {
     color:#fc8bf2!important;
     text-decoration: none!important;
@@ -46,4 +47,11 @@ a:hover {
 }
 .card {
     background-color: black;
+}
+
+.site-head, .site-motd,.site-motd {
+    background-color: black;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 10px;
 }
