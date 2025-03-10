@@ -8,8 +8,8 @@ body {
     font-size: 15px;
     background-image: url('/img/background.gif')!important;
     background-size: repeat!important;
-    background-color: #00000055;
-    background-blend-mode:darken;
+    background-color: rgb(66, 66, 66);
+    background-blend-mode: darken;
     border: 3px solid #fc8bf2; 
     height: 100vh;
     padding:0;
