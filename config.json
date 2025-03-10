@@ -1,6 +1,45 @@
 {
     "siteName": "benadryl.dev",
     "siteMotd": "i make things",
-    "siteLastUpdated": "03/08/25",
-    "footerText": "&copy; benadryl.dev 2025"
+    "siteLastUpdated": "03/10/25",
+    "footerText": "&copy; 2025 benadryl.dev. All Rights Reserved",
+    "flags": {
+        "nocss": {
+            "name": "Disable Styles",
+            "send": "nocss"
+        },
+        "paperwork": {
+            "name": "Paperwork",
+            "send": "paperwork"
+        }, 
+        "source": {
+            "name": "Source",
+            "send": "source"
+        }
+    },
+    "projects": {
+        "ptrack": {
+            "name": "ptrack",
+            "github": "https://github.com/brodyking/ptrack",
+            "demo": "https://pt.benadryl.dev",
+            "about": "This project aims at allowing one to track their nicotine intake, specifically nicotine pouches, to help those quit or try and manage their usage."
+        },
+        "macos-config": {
+            "name": "macos-config",
+            "github": "https://github.com/brodyking/macos-config",
+            "about": "this is my list of macos apps and settings that are required to make macos work well with my (or any productive persons) workflow."
+        }
+    },
+    "paperwork": {
+        "privacy": {
+            "name": "Privacy Policy",
+            "lastupdated": "March 9th, 2025",
+            "content": "This website may collect information about you such as your IP, Country of origin, etc. This information is not sold to advertisers, and is not personally identifiable."
+        },
+        "disclaimer": {
+            "name": "Notice of Non-Affiliation and Disclaimer",
+            "lastupdated": "March 9th, 2025",
+            "content": "This website is not affiliated, associated, or in contact with BENADRYL® or any other brands mentioned on this website. All trademarks are owned by their respective owners."
+        }
+    }
 }
