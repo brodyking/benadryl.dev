@@ -1,0 +1,30 @@
+{
+    "index.md": {
+        "file.nameIn" : "index.md",
+        "file.nameOut": "index.html",
+        "file.namePretty": "home",
+        "file.source": "src/pages/index.md",
+        "file.updated": "03/21/2025"
+    },
+    "projects.md": {
+        "file.nameIn" : "projects.md",
+        "file.nameOut": "projects.html",
+        "file.namePretty": "projects",
+        "file.source": "src/pages/projects.md",
+        "file.updated": "03/21/2025"
+    },
+    "blog.md": {
+        "file.nameIn" : "blog.md",
+        "file.nameOut": "blog.html",
+        "file.namePretty": "blog",
+        "file.source": "src/pages/blog.md",
+        "file.updated": "03/21/2025"
+    },
+    "404.md": {
+        "file.nameIn" : "404.md",
+        "file.nameOut": "404.html",
+        "file.namePretty": "Error 404",
+        "file.source": "src/pages/404.md",
+        "file.updated": "03/21/2025"
+    }
+}

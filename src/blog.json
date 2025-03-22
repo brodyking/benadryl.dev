@@ -1,0 +1,10 @@
+{
+    "what-is-this.md": {
+        "file.nameIn" : "what-is-this.md",
+        "file.nameOut": "what-is-this.html",
+        "file.namePretty": "what is this?",
+        "file.source": "src/blog/what-is-this.md",
+        "file.updated": "03.21.2025",
+        "file.author": "brody king"
+    }
+}

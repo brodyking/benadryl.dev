@@ -1,0 +1,12 @@
+{
+    "nav.html": {
+        "component.name" : "nav",
+        "component.source": "src/components/nav.html",
+        "component.updated": "03/21/2025"
+    },
+    "footer.html": {
+        "component.name" : "footer",
+        "component.source": "src/components/footer.html",
+        "component.updated": "03/21/2025"
+    }
+}

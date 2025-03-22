@@ -1,0 +1,2 @@
+# blog entries
+{blogListing}

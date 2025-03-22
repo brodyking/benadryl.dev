@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>what is this? - blog - benadryl.dev</title>
+        <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/assets/main.css" rel="stylesheet">
+        <link href="/assets/bootstrap/icons/font/bootstrap-icons.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/assets/icons/icon.png">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/index.html"><i class="bi bi-capsule"></i> benadryl.dev</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/blog.html"><i class="bi bi-substack"></i> blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-box-fill"></i> projects
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://pt.benadryl.dev">pouchtrack <i class="bi bi-github"></i></a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/projects.html">view all</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="form-check form-switch">
+        <label for="darkModeSwitch"><i class="bi bi-moon-stars-fill"></i></label>
+        <input class="form-check-input" type="checkbox" id="darkModeSwitch"
+          data-bs-toggle="tooltip" data-bs-placement="top">
+      </div>
+    </div>
+  </div>
+</nav>
+        <main>
+            <div class="disc border-bottom">
+                <h1 class='border-bottom'>what is this?</h1>
+                <b>author: </b> brody king<br>
+                <b>published: </b> 03.21.2025<br>
+            </div>
+            <p>welcome to <a href="https://benadryl.dev">benadryl.dev</a>. if an actual human is reading this, i will be very surprised. </p>
+<p>i only bought this domain because i thought it was funny, and now i am actually using it for serious(ish) purposes. weird.</p>
+<p>you may remember this website looked alot different than a few weeks ago. i recreated the whole site from the ground up, and i wanna write about it in this post.</p>
+<h3 class='border-bottom'>the building blocks</h3>
+<p>you might be surprised to know that almost all pages are written in markdown. your not surprised? every blog does that? oh. this is not a <a href="https://gohugo.io/">hugo site</a>, even though it would have been much easier if i choose to use it.</p>
+<p>i created a php application that converts a few json files and directories of markdown into a fully compiled, static html website. its sad to see these types of websites disappear, ones that have minimal javascript usage and no ads. just a blog, or some random thing. god i hate social media and its blank slate and corporate appearance. </p>
+<p>i could've written this in a much better language, like python or java, because all the programming is done to compile the site. hosting is as simple as dragging files on an ftp server. but php is fresh in my mind from <a href="https://github.com/brodyking/ptrack">pouchtrack</a> so i went with it.</p>
+<p>this software i have created is called <em>phpb</em>, or phpbrody. see how clever i am? very creative! i had a repo for this project but realized that i cannot maintain anything else atm. all of the websites code will be on the repo, and if you wanna use it you can manually seperate everything. its pretty simple.</p>
+<h3 class='border-bottom'>what about the sites content?</h3>
+<p>honestly, i dont know what imma put on here. time will tell. i usually make a personal site only to never touch it. maybe it will be different this time.</p>
+<p>anyways have a great day !</p>
+        </main>
+        <p style="margin:20px;" class="text-center text-secondary">
+    <a href="https://github.com/brodyking"><i class="bi bi-github text-secondary"></i></a>
+</p>
+        <script src="/assets/darkmodetoggle.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
