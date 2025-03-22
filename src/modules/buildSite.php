@@ -18,6 +18,8 @@ function buildSite()
 
     $source = "assets";
     $dest= "www/assets";
+
+    file_put_contents("www/.htaccess","ErrorDocument 404 /404.html");
     
 
     mkdir($dest, 0755);

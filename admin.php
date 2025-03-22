@@ -9,7 +9,7 @@ include("src/modules/logout.php");
 
 
 // this is the password for the admin panel. if you wish to disable to admin panel, make it empty.
-$key = "";
+$key = "admin";
 
 $phpb = ["version" => "v1"];
 $parsedown = new Parsedown();
