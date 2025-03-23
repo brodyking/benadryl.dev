@@ -22,8 +22,10 @@
 </div>
 
 # welcome
-this site is used to host some of my personal projects. more to come!
+this site is used to host some of my personal projects and blog posts.
 
 you can check out my newest creation, pouch-track below!
 
 <a href="https://pt.benadryl.dev" class="btn btn-primary">pouchtrack <i class="bi bi-box-arrow-up-right"></i></a>
+
+you can also read my blog posts [here](blog.html)
