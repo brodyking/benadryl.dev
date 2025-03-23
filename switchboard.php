@@ -62,11 +62,12 @@ if (isset($_GET["action"]) && $isloggedin && !$isdisabled) {
 <html>
 
 <head>
-    <title>Manage</title>
+    <title>switchboard</title>
     <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="/assets/main.css" rel="stylesheet">
     <link href="/assets/bootstrap/icons/font/bootstrap-icons.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/assets/icons/icon.png">
     <style>
         .card {
             margin-bottom: 15px;
@@ -74,7 +75,7 @@ if (isset($_GET["action"]) && $isloggedin && !$isdisabled) {
     </style>
 </head>
 
-<body style="padding: 20px;">
+<body class="pe-2 ps-2">
 
     <?php if (!$isloggedin && !$isdisabled) {
 
@@ -96,19 +97,33 @@ if (isset($_GET["action"]) && $isloggedin && !$isdisabled) {
         echo '
         <h1 class="border-bottom">switchboard</h1>
         <p>
-        debugger and compiler for <code>benadryl.dev</code>
+        debugger and compiler for <a href="https://benadryl.dev">benadryl.dev</a>
         </p>
-        <h2 class="border-bottom">manage site</h2>
+        <h2 class="border-bottom">build</h2>
         <p>
             <div class="row">
                 <div class="col-sm">
-                    <a href="?action=build&tempkey=' . $tempkey . '" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="m-0 mb-1 p-0"><i class="bi bi-hammer"></i></h1>build site</a>
+                    <a href="?action=build&tempkey=' . $tempkey . '" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="m-0 mb-1 p-0"><i class="bi bi-hammer"></i></h1>build</a>
                 </div>
                 <div class="col-sm">
-                    <a href="?action=delete&tempkey=' . $tempkey . '" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="mb-0 mb-1 p-0"><i class="bi bi-trash-fill"></i></h1>delete site</a>
+                    <a href="?action=delete&tempkey=' . $tempkey . '" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="mb-0 mb-1 p-0"><i class="bi bi-trash-fill"></i></h1>delete</a>
                 </div>
                 <div class="col-sm">
                 </div>
+            </div>
+            <br>
+            </div>
+            <h2 class="border-bottom">test and deploy</h2>
+            <div class="row">
+                <div class="col-sm">
+                    <a href="www/" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="mb-0 mb-1 p-0"><i class="bi bi-globe-americas"></i></h1>view</a>
+                </div>
+                <div class="col-sm">
+                    <a href="https://github.com/brodyking/benadryl.dev/" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="mb-0 mb-1 p-0"><i class="bi bi-github"></i></h1>github</a>
+                </div>
+                <div class="col-sm">
+                </div>
+
             </div>
         </p>
         <h2 class="border-bottom">account actions</h2>
