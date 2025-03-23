@@ -67,7 +67,7 @@ function buildSite()
                 $bloglistrawhtml = $bloglistrawhtml."<tr><td><a href='blog/".$currentPost["file.nameOut"]."'>".$currentPost["file.namePretty"]."</a></td><td>".$currentPost["file.author"]."</td><td>".$currentPost["file.updated"]."</td></tr>";
             }
             $bloglistrawhtml = $bloglistrawhtml."</tbody></table>";
-            $page = str_replace("{blogListing}",$bloglistrawhtml,$page);
+            $page = str_replace("{misc.blog}",$bloglistrawhtml,$page);
         }
 
 

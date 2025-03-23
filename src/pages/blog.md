@@ -1,2 +1,2 @@
 # blog entries
-{blogListing}
+{misc.blog}
