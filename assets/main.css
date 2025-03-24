@@ -72,7 +72,7 @@ h3 {
     margin-left: 4px;
 }
 
-b {
+b,strong {
     font-family: SF-Bold!important;
 }
 
