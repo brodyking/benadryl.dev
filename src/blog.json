@@ -1,4 +1,12 @@
 {
+    "i-love-php.md": {
+        "file.nameIn" : "i-love-php.md",
+        "file.nameOut" : "i-love-php.html",
+        "file.namePretty": "i love php",
+        "file.source": "src/blog/i-love-php.md",
+        "file.updated": "03.23.2025",
+        "file.author": "brody king"
+    },
     "what-is-this.md": {
         "file.nameIn" : "what-is-this.md",
         "file.nameOut": "what-is-this.html",
