@@ -80,17 +80,28 @@ if (isset($_GET["action"]) && $isloggedin && !$isdisabled) {
     <?php if (!$isloggedin && !$isdisabled) {
 
         echo '
-        <div class="card">
-            <div class="card-body">
+        <h1 class="border-bottom">
+            switchboard
+        </h1>
+        <p>
+            build and test with this page.
+        </p>
+        <div class="alert alert-info rounded-0 border-4" style="border-top-style: none;border-right-style:none;border-bottom-style:none;" role="alert">
+            <h3>security notice</h3>
+            <hr class="mt-0">
+            this page should never be visible to the public. <b>it is not secure.</b><br>
+            only show contents in or from the <b>www/</b> directory.
+        </div>
+        <h3 class="border-bottom">login</h3>
+        <p>the key can be found and modified at the top of the <b>switchboard.php</b> file.</p>
             <form method="POST" action="switchboard.php">
               <div class="mb-3">
-                  <label class="col-form-label">Key</label>
-                  <input type="password" class="form-control" name="key">
-              </div>
-             <button type="submit" class="btn btn-primary">Login</button>
+                  <input type="password" class="form-control" name="key" placeholder="private access key">
+                </div>
+              <div class="mb-3">
+                  <button type="submit" class="btn btn-primary">login</button>
+                  </div>
           </form>
-                        </div>
-        </div> 
         ';
 
     } else if (!$isdisabled) {
@@ -150,6 +161,7 @@ if (isset($_GET["action"]) && $isloggedin && !$isdisabled) {
         echo "disabled";
     }
     ?>
+    <p class="opacity-50 text-center mt-5">software written by brody king.</p> 
     <script src="/assets/darkmodetoggle.js"></script>
     <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
