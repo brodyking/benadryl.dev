@@ -9,7 +9,7 @@ include("src/modules/logout.php");
 
 
 // this is the password for the admin panel. if you wish to disable to admin panel, make it empty.
-$key = "admin";
+$key = "";
 
 $phpb = ["version" => "v1"];
 $parsedown = new Parsedown();
@@ -46,6 +46,12 @@ if (isset($_GET["action"]) && $isloggedin && !$isdisabled) {
     switch ($_GET["action"]) {
         case "build":
             buildSite();
+            break;
+        case "buildblog":
+            buildBlog();
+            break;
+        case "buildpages":
+            buildPages();
             break;
         case "delete":
             deleteSite();
@@ -93,7 +99,7 @@ if (isset($_GET["action"]) && $isloggedin && !$isdisabled) {
             only show contents in or from the <b>www/</b> directory.
         </div>
         <h3 class="border-bottom">login</h3>
-        <p>the key can be found and modified at the top of the <b>switchboard.php</b> file.</p>
+        <p>the key can be found and modified at the top of the <b>index.php</b> file.</p>
             <form method="POST" action="switchboard.php">
               <div class="mb-3">
                   <input type="password" class="form-control" name="key" placeholder="private access key">
@@ -112,15 +118,23 @@ if (isset($_GET["action"]) && $isloggedin && !$isdisabled) {
         </p>
         <h2 class="border-bottom">build</h2>
         <p>
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-sm">
-                    <a href="?action=build&tempkey=' . $tempkey . '" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="m-0 mb-1 p-0"><i class="bi bi-hammer"></i></h1>build</a>
+                    <a href="?action=build&tempkey=' . $tempkey . '" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="m-0 mb-1 p-0"><i class="bi bi-hammer"></i></h1>site</a>
                 </div>
+                <div class="col-sm">
+                    <a href="?action=buildblog&tempkey=' . $tempkey . '" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="m-0 mb-1 p-0"><i class="bi bi-hammer"></i></h1>blog</a>
+                </div>
+                <div class="col-sm">
+                    <a href="?action=buildpages&tempkey=' . $tempkey . '" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="m-0 mb-1 p-0"><i class="bi bi-hammer"></i></h1>pages</a>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-sm">
                     <a href="?action=delete&tempkey=' . $tempkey . '" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="mb-0 mb-1 p-0"><i class="bi bi-trash-fill"></i></h1>delete</a>
                 </div>
-                <div class="col-sm">
-                </div>
+                <div class="col-sm"></div>
+                <div class="col-sm"></div>
             </div>
             <br>
             </div>
@@ -132,9 +146,7 @@ if (isset($_GET["action"]) && $isloggedin && !$isdisabled) {
                 <div class="col-sm">
                     <a href="https://github.com/brodyking/benadryl.dev/" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="mb-0 mb-1 p-0"><i class="bi bi-github"></i></h1>github</a>
                 </div>
-                <div class="col-sm">
-                </div>
-
+                <div class="col-sm"></div>
             </div>
         </p>
         <h2 class="border-bottom">account actions</h2>
@@ -143,10 +155,8 @@ if (isset($_GET["action"]) && $isloggedin && !$isdisabled) {
             <div class="col-sm">
                 <a href="?action=logout&tempkey=' . $tempkey . '" class="btn btn-primary w-100 pt-3 pb-3"><h1 class="mb-0 mb-1 p-0"><i class="bi bi-door-open-fill"></i></h1>logout</a>
             </div>
-            <div class="col-sm">
-            </div>
-            <div class="col-sm">
-            </div>
+            <div class="col-sm"></div>
+            <div class="col-sm"></div>
         </div>
         </p>
     </div>
