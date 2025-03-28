@@ -1,4 +1,11 @@
-{
+{   "bootstrap headaches.md": {
+        "file.nameIn" : "bootstrap-headaches.md",
+        "file.nameOut" : "bootstrap-headaches.html",
+        "file.namePretty": "bootstrap headaches",
+        "file.source": "src/blog/bootstrap-headaches.md",
+        "file.updated": "03.28.2025",
+        "file.author": "brody king"
+    },
     "i-love-php.md": {
         "file.nameIn" : "i-love-php.md",
         "file.nameOut" : "i-love-php.html",
