@@ -1,7 +1,7 @@
 <?php
 
 
-function buildBlog()
+function buildBlog($isdev)
 {
 
   global $config;
@@ -38,11 +38,16 @@ function buildBlog()
     $page = str_replace("<h2>", "<h2 class='border-bottom'>", $page);
     $page = str_replace("<h3>", "<h3 class='border-bottom'>", $page);
 
+    // Links for dev mode
+    if ($isdev) {
+      $page = str_replace('href="/', 'href="/www/', $page);
+    }
+
     file_put_contents("www/blog/" . $currentPost['file.nameOut'], $page);
   }
 }
 
-function buildPages()
+function buildPages($isdev)
 {
   global $config;
   global $parsedown;
@@ -86,12 +91,17 @@ function buildPages()
       $page = str_replace("{misc.blog}", $bloglistrawhtml, $page);
     }
 
+    // Links for dev mode
+    if ($isdev) {
+      $page = str_replace('href="/', 'href="/www/', $page);
+    }
+
 
     file_put_contents("www/" . $currentPage['file.nameOut'], $page);
   }
 }
 
-function buildSite()
+function buildSite($isdev)
 {
   global $config;
   global $parsedown;
@@ -125,8 +135,8 @@ function buildSite()
     }
   }
 
-  buildBlog();
-  buildPages();
+  buildBlog($isdev);
+  buildPages($isdev);
 
 }
 

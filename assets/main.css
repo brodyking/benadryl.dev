@@ -56,6 +56,14 @@ nav {
     text-decoration: none!important;
 }
 
+.dropdown-item:active {
+    background-color: #FC8BF2;
+    color: black;
+}
+.dropdown-item:active:hover {
+    color: black;
+}
+
 h1 {
     font-size: 2em;
 }
@@ -75,9 +83,10 @@ h3 {
 b,strong {
     font-family: SF-Bold!important;
 }
-
-[data-bs-theme=dark] a {
+a {
     text-decoration: none;
+}
+[data-bs-theme=dark] a {
     color: #FC8BF2;
 }
 [data-bs-theme=dark] a:hover {
