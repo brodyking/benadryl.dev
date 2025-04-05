@@ -16,7 +16,7 @@ the project got very messy, very quick. i refuse to spend another minute in that
 i thought it would be interesting to try and be more "object oriented" in my design, which was a very bad decision.
 you should watch ["object-oriented programming is bad"](https://www.youtube.com/watch?v=QM1iUe6IofM) by brian will.
 it's a great example of why its the wrong choice in some cases.
-if you want proof for yourself, just checkout [the github repo](https://github.com/brodyking/ptrack).
+if you want proof for yourself, just checkout [the github repo](https://github.com/brodyking/flashcarrd).
 no words are needed. head into `api/` and you will not be disappointed.
 
 ### what i learned
