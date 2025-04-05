@@ -86,6 +86,13 @@ b,strong {
 a {
     text-decoration: none;
 }
+
+img {
+    max-width: 100%;
+    border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+    border-radius: var(--bs-border-radius) !important;
+    margin-bottom: 16px;
+}
 [data-bs-theme=dark] a {
     color: #FC8BF2;
 }
