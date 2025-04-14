@@ -1,4 +1,13 @@
-{   "ending-flashcarrd.md": {
+{   
+   "getting-better-at-css.md": {
+        "file.nameIn" : "getting-better-at-css.md",
+        "file.nameOut" : "getting-better-at-css.html",
+        "file.namePretty": "getting better at css",
+        "file.source": "src/blog/getting-better-at-css.md",
+        "file.updated": "04.13.2025",
+        "file.author": "brody king"
+    },
+    "ending-flashcarrd.md": {
         "file.nameIn" : "ending-flashcarrd.md",
         "file.nameOut" : "ending-flashcarrd.html",
         "file.namePretty": "ending flashcarrd",
