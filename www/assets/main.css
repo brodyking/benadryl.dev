@@ -93,6 +93,8 @@ img {
     border-radius: var(--bs-border-radius) !important;
     margin-bottom: 16px;
 }
+
+
 [data-bs-theme=dark] a {
     color: #FC8BF2;
 }
