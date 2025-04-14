@@ -135,6 +135,8 @@ function buildSite($isdev)
     }
   }
 
+  file_put_contents("www/.htaccess", "RewriteEngine on\nErrorDocument 404 /404.html");
+
   buildBlog($isdev);
   buildPages($isdev);
 
