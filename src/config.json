@@ -1,7 +1,0 @@
-{
-    "site.name": "benadryl.dev",
-    "site.author": "brody king",
-    "site.lastUpdated": "01/01/2001",
-    "site.page.template": "src/components/page-template.html",
-    "site.blog.template": "src/components/blog-template.html"
-}

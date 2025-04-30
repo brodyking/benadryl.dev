@@ -1,2 +1,0 @@
-# blog entries
-{misc.blog}
