@@ -52,6 +52,12 @@
       "namedRegex": "^/contact(?:/)?$"
     },
     {
+      "page": "/contact/everything",
+      "regex": "^/contact/everything(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/contact/everything(?:/)?$"
+    },
+    {
       "page": "/everything",
       "regex": "^/everything(?:/)?$",
       "routeKeys": {},

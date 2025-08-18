@@ -56,8 +56,8 @@ export function Projects() {
         </div>
       </div>
       <Link href="/everything" className="text-xl mt-5 block">
-        <Button variant="outline" className="w-full">
-          see all of my work
+        <Button variant="link" className="w-full">
+          view more
           <i className="bi bi-arrow-right"></i>
         </Button>
       </Link>

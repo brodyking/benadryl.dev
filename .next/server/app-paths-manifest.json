@@ -2,6 +2,7 @@
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/everything/page": "app/everything/page.js",
+  "/contact/page": "app/contact/page.js",
   "/page": "app/page.js",
-  "/contact/page": "app/contact/page.js"
+  "/contact/everything/page": "app/contact/everything/page.js"
 }
