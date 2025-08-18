@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 
 export function Landing() {
 	return (
-    <div className="flex items-center gap-4 pb-8">
+    <div className="flex items-center gap-0 md:gap-4 pb-8">
       <Link href="/me.jpg">
         <Image
           className="rounded-full mt-5 hidden md:block"
@@ -27,6 +27,11 @@ export function Landing() {
         <Link href="https://github.com/brodyking">
           <Button variant="outline">
             <i className="bi bi-github"></i> @brodyking
+          </Button>
+        </Link>
+        <Link href="/contact">
+          <Button variant="outline" className="ms-2">
+            <i className="bi bi-envelope-fill"></i> contact
           </Button>
         </Link>
         </div>

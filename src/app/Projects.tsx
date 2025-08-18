@@ -4,7 +4,7 @@ import Link from "next/link";
 export function Projects() {
   return (
     <>
-      <h1 className="text-2xl border-b pb-2">Projects</h1>
+      <h1 className="text-2xl border-b pb-2">my work</h1>
       <div className="flex gap-2 flex-wrap md:flex-nowrap pt-3">
         <div className="flex-auto border rounded-md p-3">
           <h1 className="text-xl border-b pb-1 mb-1">chipledger</h1>
@@ -55,6 +55,12 @@ export function Projects() {
           </Link>
         </div>
       </div>
+      <Link href="/everything" className="text-xl mt-5 block">
+        <Button variant="outline" className="w-full">
+          see all of my work
+          <i className="bi bi-arrow-right"></i>
+        </Button>
+      </Link>
     </>
   )  
 }

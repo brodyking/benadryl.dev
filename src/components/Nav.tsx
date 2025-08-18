@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
+import Image from "next/image"; 
 
 // Your navigation links
 const navLinks = [
@@ -20,8 +21,12 @@ export function Nav() {
     <nav className="border-b bg-background mb-4">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="text-xl">
-          <i className="bi bi-capsule mr-1"></i>
-           benadryl.dev
+          <Button variant="link" className="p-0 text-xl">
+            <Image src="/favicon.ico" width="16" height="6" className="inline mr-0 align-middle" alt="site logo" />
+            <span className="inline align-middle">
+             benadryl.dev
+            </span>
+          </Button>
         </Link>
         <div className="hidden items-center gap-4 md:flex">
           {/* Desktop navigation links */}
