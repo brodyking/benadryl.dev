@@ -1,0 +1,158 @@
+body {
+  max-width: 650px;
+  margin: auto;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 14px !important;
+  background-color: #0A0A0A;
+}
+
+.bi {
+  margin-right: 5px;
+}
+
+.btn {
+  padding: 8px 16px 8px 16px;
+  border-radius: .625rem;
+  font-size: 14px !important;
+  background-color: #151515;
+  border: 1px solid #383838 !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.btn:hover {
+  background-color: #1C1C1C;
+}
+
+.footer-p {
+  color: white;
+  font-style: bold;
+  opacity: 60%;
+}
+
+.footer-btn {
+  color: white;
+  font-style: bold;
+  text-decoration: none;
+  opacity: 60%;
+}
+
+.footer-btn:hover {
+  text-decoration: underline;
+}
+
+.me {
+  width: 150px;
+  border-radius: 3.40282e+38px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #232323 !important;
+}
+
+.border-top {
+  border-top: 1px solid #232323 !important;
+}
+
+.border {
+  border: 1px solid #232323 !important;
+}
+
+.rounded {
+  border-radius: .625rem;
+}
+
+.index-buttons>.col>a {
+  width: 100%;
+}
+
+.index-buttons>.col {
+  padding: 0px;
+}
+
+.portfolio-box {
+  padding: 10px 10px 10px 10px;
+}
+
+#portfolio>.row {
+  padding: 10px 10px 10px 10px;
+}
+
+.portfolio-box>p,
+.portfolio-box>a,
+.portfolio-box>button {
+  display: block;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+hr {
+  border-color: #232323 !important;
+}
+
+.modal-content {
+  background-color: black;
+  border: 1px solid #232323;
+  font-size: 16px;
+}
+
+
+.modal-header {
+  border: none;
+}
+
+
+@media (max-width: 775px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .row>[class*="col"] {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .row>[class*="col"]>.btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .me {
+    margin-bottom: 15px;
+  }
+}
+
+.archived {
+  color: #EEA200;
+  font-size: 20px;
+}
+
+/* Custom CSS to expand the navbar at 400px and wider */
+@media (min-width: 775px) {
+  .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    /* Aligns nav items horizontally */
+  }
+
+  .navbar-toggler {
+    display: none;
+    /* Hides the hamburger button */
+  }
+
+  .navbar-nav .nav-item {
+    float: left;
+    /* Ensures links sit side-by-side */
+  }
+
+  .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+}
